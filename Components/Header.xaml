@@ -4,8 +4,10 @@
              Height="60">
 	<DockPanel Background="{StaticResource PrimaryBackgroundBrush}" LastChildFill="False">
 		<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-			<Rectangle Width="32" Height="32" Fill="{StaticResource AccentBrush}" RadiusX="4" RadiusY="4"/>
-			<TextBlock Text="Byte Sweep" FontSize="18" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Margin="10,0,0,0"/>
+            <ContentControl Width="30" Height="30"
+                Template="{StaticResource LogoTemplate}"
+                Foreground="{StaticResource AccentBrush}"/>
+            <TextBlock Text="Byte Sweep" FontSize="24" FontWeight="Bold" Style="{StaticResource TextFont}" Margin="5,0,0,0"/>
 		</StackPanel>
 	</DockPanel>
 </UserControl>

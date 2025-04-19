@@ -5,14 +5,6 @@
              Width="200"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
-    <UserControl.Resources>
-        <!-- Merge the Icons.xaml ResourceDictionary -->
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resources/Icons.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
 
     <Grid Background="{StaticResource PrimaryBackgroundBrush}">
         <StackPanel VerticalAlignment="Stretch">
