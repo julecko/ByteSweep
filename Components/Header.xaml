@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Height="60">
-	<DockPanel Background="{StaticResource SidebarBrush}" LastChildFill="False">
+	<DockPanel Background="{StaticResource PrimaryBackgroundBrush}" LastChildFill="False">
 		<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
 			<Rectangle Width="32" Height="32" Fill="{StaticResource AccentBrush}" RadiusX="4" RadiusY="4"/>
 			<TextBlock Text="Byte Sweep" FontSize="18" FontWeight="Bold" Foreground="{StaticResource TextBrush}" Margin="10,0,0,0"/>

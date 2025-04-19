@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ByteSweep.Components.SidebarOption"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="Root"
+             Width="Auto" Height="Auto">
+
+    <Button Style="{StaticResource SidebarButtonStyle}" Click="SidebarButton_Click">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <ContentControl Width="16" Height="16"
+                Template="{Binding Icon, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                Foreground="{StaticResource IconBrush}"/>
+            <TextBlock Text="{Binding Text, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                       Margin="10,0,0,0"
+                       Style="{StaticResource IconTextFont}" />
+        </StackPanel>
+    </Button>
+</UserControl>

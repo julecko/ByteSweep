@@ -1,31 +1,35 @@
 ﻿<UserControl x:Class="ByteSweep.Components.Sidebar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:components="clr-namespace:ByteSweep.Components"
              Width="200"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
+    <UserControl.Resources>
+        <!-- Merge the Icons.xaml ResourceDictionary -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
 
-	<Grid Background="{StaticResource SidebarBrush}">
-		<StackPanel VerticalAlignment="Stretch">
-			<Button Content="🗑 Junk Files"
-                    Style="{StaticResource SidebarButtonStyle}"
-                    Click="SidebarButton_Click"
-                    Tag="JunkFiles"/>
+    <Grid Background="{StaticResource PrimaryBackgroundBrush}">
+        <StackPanel VerticalAlignment="Stretch">
+            <!-- Junk Files -->
+            <components:SidebarOption Text="Junk Files" Icon="{StaticResource TrashcanIconTemplate}"/>
 
-			<Button Content="📁 Big Files"
-                    Style="{StaticResource SidebarButtonStyle}"
-                    Click="SidebarButton_Click"
-                    Tag="BigFiles"/>
+            <!-- Big Files -->
+            <components:SidebarOption Text="Big Files" Icon="{StaticResource FileIconTemplate}"/>
 
-			<Button Content="📄 Duplicate Files"
-                    Style="{StaticResource SidebarButtonStyle}"
-                    Click="SidebarButton_Click"
-                    Tag="DuplicateFiles"/>
+            <!-- Duplicate Files -->
+            <components:SidebarOption Text="Duplicate Files" Icon="{StaticResource DuplicateFileIconTemplate}"/>
 
-			<Button Content="📝 Metadata Editor"
-                    Style="{StaticResource SidebarButtonStyle}"
-                    Click="SidebarButton_Click"
-                    Tag="MetadataEditor"/>
-		</StackPanel>
-	</Grid>
+            <!-- Metadata Editor -->
+            <components:SidebarOption Text="Metadata Editor" Icon="{StaticResource MetadataIconTemplate}"/>
+            
+            <!-- Disk Stats -->
+            <components:SidebarOption Text="Disk Stats" Icon="{StaticResource StatsIconTemplate}"/>
+        </StackPanel>
+    </Grid>
 </UserControl>
